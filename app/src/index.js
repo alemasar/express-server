@@ -1,5 +1,6 @@
 import logMessage from './js/logger'
 import './css/style.css'
+import './scss/style.scss'
 // Log message to console
 logMessage('A very warm welcome to Expack!')
 // Needed for Hot Module Replacement

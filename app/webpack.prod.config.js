@@ -49,15 +49,31 @@ module.exports = {
       },
       {
         // Loads images into CSS and Javascript files
-        test: /\.jpg$/,
-        use: [{loader: "url-loader"}]
+       test: /\.(png|svg|jpg|gif)$/,
+       use: ['file-loader']
       },
       {
         // Loads CSS into a file when you import it via Javascript
         // Rules are set in MiniCssExtractPlugin
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader']
-      },
+	  },
+	  {
+			// Loads CSS into a file when you import it via Javascript
+			// Rules are set in MiniCssExtractPlugin
+			test: /\.scss$/,
+			use: [MiniCssExtractPlugin.loader].concat([
+				{
+					loader: 'css-loader',
+					options: {
+						url: true,
+					}
+				}, {
+					loader: 'sass-loader',
+					options: {}
+				}
+			])
+	},
     ]
   },
   plugins: [
@@ -67,7 +83,9 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
-      chunkFilename: "[id].css"
+		chunkFilename: "[id].css",
+		hot: false, // optional as the plugin cannot automatically detect if you are using HOT, not for production use
+		allChunks: true,
     })
   ]
 }
