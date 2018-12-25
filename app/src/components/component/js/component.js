@@ -104,5 +104,5 @@ export default class HowToCheckbox extends HTMLElement {
 	  }
   }*/
 
-  const logMessage = msg => console.log(msg+ "Desde logger.cat")
+  const logMessage = msg => console.log(msg+ "Desde logger.cat amb hot module no funciona el reload???? Ara funciona no fotis altre cop")
   export default logMessage

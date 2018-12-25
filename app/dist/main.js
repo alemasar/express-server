@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "a98c245fccf90a927622";
+/******/ 	var hotCurrentHash = "1faa3d47211d455d2f06";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -2510,10 +2510,10 @@ module.exports.showProblems = showProblems;
 
 /***/ }),
 
-/***/ "./node_modules/webpack-hot-middleware/client.js?path=/__webpack_hmr&timeout=20000":
-/*!****************************************************************************!*\
-  !*** (webpack)-hot-middleware/client.js?path=/__webpack_hmr&timeout=20000 ***!
-  \****************************************************************************/
+/***/ "./node_modules/webpack-hot-middleware/client.js?path=/__webpack_hmr&timeout=20000&reload=true":
+/*!****************************************************************************************!*\
+  !*** (webpack)-hot-middleware/client.js?path=/__webpack_hmr&timeout=20000&reload=true ***!
+  \****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2813,7 +2813,7 @@ if (module) {
   };
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, "?path=/__webpack_hmr&timeout=20000", __webpack_require__(/*! ./../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(this, "?path=/__webpack_hmr&timeout=20000&reload=true", __webpack_require__(/*! ./../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
 
@@ -3154,7 +3154,7 @@ export default class HowToCheckbox extends HTMLElement {
 	  }
   }*/
 var logMessage = function logMessage(msg) {
-  return console.log(msg + "Desde logger.cat");
+  return console.log(msg + "Desde logger.cat amb hot module no funciona el reload");
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (logMessage);
@@ -3252,11 +3252,7 @@ var returnValue = function returnValue() {
 /* harmony default export */ __webpack_exports__["default"] = (returnValue);
 document.addEventListener("DOMContentLoaded", function () {
   returnValue();
-}); // Needed for Hot Module Replacement
-
-if (typeof module.hot !== 'undefined') {
-  module.hot.accept(); // eslint-disable-line no-undef  
-}
+});
 
 /***/ }),
 
@@ -3316,13 +3312,13 @@ if(true) {
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************************************!*\
-  !*** multi webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000 ./src/index.js ***!
-  \********************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** multi webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true ./src/index.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000 */"./node_modules/webpack-hot-middleware/client.js?path=/__webpack_hmr&timeout=20000");
+__webpack_require__(/*! webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true */"./node_modules/webpack-hot-middleware/client.js?path=/__webpack_hmr&timeout=20000&reload=true");
 module.exports = __webpack_require__(/*! ./src/index.js */"./src/index.js");
 
 

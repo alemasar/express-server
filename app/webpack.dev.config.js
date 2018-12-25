@@ -5,7 +5,7 @@ const MyPlugin = require('./src/server/custom-webpack/cat-plugin')
 module.exports = {
 	entry: {
 		main: [
-			'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+			'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true',
 			'./src/index.js',
 		],
 	},
