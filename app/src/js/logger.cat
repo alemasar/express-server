@@ -1,0 +1,6 @@
+[{
+	"config": {
+		"scss": "components/component/scss/component.scss",
+		"js": "components/component/js/component.js"
+	}
+}]

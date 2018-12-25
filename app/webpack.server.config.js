@@ -7,7 +7,7 @@ module.exports = (env, argv) => {
     './src/server/server-dev.js'
 return ({
     entry: {
-      server: SERVER_PATH,
+      server: './src/server/server-dev.js',
     },
     output: {
       path: path.join(__dirname, 'dist'),
